@@ -55,11 +55,11 @@ if __name__ == "__main__":
         if current_player == 1:
             print("Player 1's turn")
             while True: 
-                row = int(input("Please enter the x value "))
-                col = int(input("Please enter the y value "))
-                row -= 1  # Adjust for 0-indexing
-                col -= 1
-                if row < 0 or row > 2 or col < 0 or col > 2:
+                x = int(input("Please enter the value from 1 to 9: "))
+                x -= 1
+                row = x // 3
+                col = x % 3
+                if x < 0 or x > 8:
                     print("Invalid Input, Enter again.")
                     continue
                 elif board[row][col] == '-':
@@ -71,11 +71,11 @@ if __name__ == "__main__":
         else:
             print("Player 2's turn")
             while True: 
-                row = int(input("Please enter the x value "))
-                col = int(input("Please enter the y value "))
-                row -= 1  # Adjust for 0-indexing
-                col -= 1
-                if row < 0 or row > 2 or col < 0 or col > 2:
+                x = int(input("Please enter the value from 1 to 9: "))
+                x -= 1
+                row = x // 3
+                col = x % 3
+                if x < 0 or x > 8:
                     print("Invalid Input, Enter again.")
                     continue
                 elif board[row][col] == '-':
